@@ -275,6 +275,8 @@ export default {
         number,
         isValid: this.state,
         country: this.activeCountry,
+        prefixCode: '+' + this.activeCountry.dialCode,
+        numberWithoutPrefix: this.phone
       };
     },
   },
