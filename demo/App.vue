@@ -18,6 +18,11 @@
         Country:
         <strong>{{ phone.country }}</strong>
       </span>
+      <div>
+        Separated stuff:
+        <strong>{{ phone.prefixCode }}</strong> | 
+        <span>{{ phone.numberWithoutPrefix }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -31,11 +36,13 @@ export default {
         number: '',
         isValid: false,
         country: undefined,
+        prefixCode: '',
+        numberWithoutPrefix: ''
       },
     };
   },
   methods: {
-    onInput({ number, isValid, country }) {
+    onInput({ number, isValid, country, prefixCode, numberWithoutPrefix }) {
       this.phone.number = number;
       this.phone.isValid = isValid;
       this.phone.country = country && country.name;
