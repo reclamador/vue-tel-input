@@ -46,6 +46,8 @@ export default {
       this.phone.number = number;
       this.phone.isValid = isValid;
       this.phone.country = country && country.name;
+      this.phone.prefixCode = prefixCode;
+      this.phone.numberWithoutPrefix = numberWithoutPrefix;
     },
   },
 };
