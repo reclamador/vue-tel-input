@@ -39,6 +39,8 @@ webpackJsonp([1],[
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   name: 'app',
@@ -1972,7 +1974,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
       }return Array.from(t);
     }var i = n(51),
         a = n(59),
-        o = n(60);e.a = { name: "vue-tel-input", props: { value: { type: String }, placeholder: { type: String, default: "Enter a phone number" }, disabledFetchingCountry: { type: Boolean, default: !1 }, disabled: { type: Boolean, default: !1 }, invalidMsg: { default: "", type: String }, required: { type: Boolean, default: !1 }, defaultCountry: { type: String, default: "" }, enabledFlags: { type: Boolean, default: !0 }, preferredCountries: { type: Array, default: function _default() {
+        o = n(60);e.a = { name: "vue-tel-input", props: { value: { type: String }, placeholder: { type: String, default: "Enter a phone number" }, disabledFetchingCountry: { type: Boolean, default: !1 }, disabled: { type: Boolean, default: !1 }, invalidMsg: { default: "", type: String }, required: { type: Boolean, default: !1 }, defaultCountry: { type: String, default: "" }, nationalMode: { type: String, default: "International" }, enabledFlags: { type: Boolean, default: !0 }, preferredCountries: { type: Array, default: function _default() {
             return [];
           } }, onlyCountries: { type: Array, default: function _default() {
             return [];
@@ -1997,7 +1999,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         }, formattedResult: function formattedResult() {
           if (!this.mode || !this.filteredCountries) return "";var t = this.phone;if ("code" === this.mode) {
             var e = new i.a();e.input(this.phone), this.activeCountry = this.findCountry(e.country) || this.activeCountry;
-          } else "prefix" === this.mode && (t = this.phone.slice(1));return Object(i.b)(t, this.activeCountry && this.activeCountry.iso2, "International");
+          } else "prefix" === this.mode && (t = this.phone.slice(1));return console.log(this.nationalMode), Object(i.b)(t, this.activeCountry && this.activeCountry.iso2, this.nationalMode);
         }, state: function state() {
           return Object(i.c)(this.formattedResult, this.activeCountry && this.activeCountry.iso2);
         }, response: function response() {
@@ -2621,7 +2623,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
         a = n(105),
         o = n(50),
         d = r,
-        s = o(i.a, a.a, !1, d, "data-v-2d0cdcc0", null);e.a = s.exports;
+        s = o(i.a, a.a, !1, d, "data-v-640bfc4c", null);e.a = s.exports;
   }, function (t, e) {}, function (t, e) {}, function (t, e) {
     t.exports = function (t, e, n, r, i, a) {
       var o,
@@ -4664,7 +4666,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */](Object.assign({}, __WEB
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_babelrc_false_presets_Users_victormerino_desarrollo_vue_tel_input_node_modules_babel_preset_poi_index_js_jsx_vue_cacheDirectory_true_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(/*! !babel-loader?{"babelrc":false,"presets":[["/Users/victormerino/desarrollo/vue-tel-input/node_modules/babel-preset-poi/index.js",{"jsx":"vue"}]],"cacheDirectory":true}!../node_modules/vue-loader/lib/selector?type=script&index=0!./App.vue */ 2);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5e6861be_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-5e6861be","hasScoped":false,"buble":{"transforms":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./App.vue */ 13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2fc6ce9a_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(/*! !../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-2fc6ce9a","hasScoped":false,"buble":{"transforms":{}}}!../node_modules/vue-loader/lib/selector?type=template&index=0!./App.vue */ 13);
 var normalizeComponent = __webpack_require__(/*! ../node_modules/vue-loader/lib/component-normalizer */ 12)
 /* script */
 
@@ -4681,7 +4683,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_babelrc_false_presets_Users_victormerino_desarrollo_vue_tel_input_node_modules_babel_preset_poi_index_js_jsx_vue_cacheDirectory_true_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5e6861be_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2fc6ce9a_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -4695,7 +4697,7 @@ var Component = normalizeComponent(
 /* 12 */,
 /* 13 */
 /*!***********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-5e6861be","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./demo/App.vue ***!
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-2fc6ce9a","hasScoped":false,"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./demo/App.vue ***!
   \***********************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /*! exports used: default */
