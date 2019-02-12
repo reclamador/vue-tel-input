@@ -173,6 +173,10 @@ export default {
       type: String,
       default: '',
     },
+    nationalMode: {
+      type: String,
+      default: 'International',
+    },
     enabledFlags: {
       type: Boolean,
       default: true
@@ -262,7 +266,7 @@ export default {
         phone = this.phone.slice(1);
       }
 
-      return formatNumber(phone, this.activeCountry && this.activeCountry.iso2, 'International');
+      return formatNumber(phone, this.activeCountry && this.activeCountry.iso2, this.nationalMode);
     },
     state() {
       return isValidNumber(this.formattedResult, this.activeCountry && this.activeCountry.iso2);
@@ -275,6 +279,8 @@ export default {
         number,
         isValid: this.state,
         country: this.activeCountry,
+        prefixCode: '+' + this.activeCountry.dialCode,
+        numberWithoutPrefix: this.phone
       };
     },
   },
